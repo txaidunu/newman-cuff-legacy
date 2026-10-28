@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Appendix A: Provenance Correspondence (The "Fun Obit" Emails)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #070f1a; --navy-mid: #0c1829; --aluminum: #c5cdd8; --aluminum-dim: #7a8494;
+      --ivory: #f3efe4; --gold: #c9a84c; --gold-dim: #9a7b2f; --warm-black: #050505;
+      --text: #e6e1d5; --text-dim: #9a9488;
+      --font-serif: "Cormorant Garamond", Georgia, serif; --font-sans: "Inter", system-ui, sans-serif;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-sans); background: var(--navy); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .nav { position: sticky; top: 0; z-index: 100; padding: 1rem 0; background: rgba(7,15,26,0.94); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(201,168,76,0.12); }
+    .nav-inner { max-width: 1180px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--font-serif); font-size: 1.05rem; color: var(--ivory); letter-spacing: 0.04em; }
+    .back { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(201,168,76,0.3); padding: 0.5rem 1rem; transition: background 0.3s; }
+    .back:hover { background: rgba(201,168,76,0.08); }
+    .header { padding: 4rem 2rem 2.5rem; background: var(--warm-black); border-bottom: 1px solid rgba(201,168,76,0.1); }
+    .wrap { max-width: 900px; margin: 0 auto; }
+    .wrap-wide { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+    .act { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1rem; }
+    h1 { font-family: var(--font-serif); font-weight: 300; font-size: clamp(1.7rem, 3.5vw, 2.5rem); color: var(--ivory); line-height: 1.15; margin-bottom: 1rem; }
+    .intro { color: var(--text-dim); font-size: 1.05rem; max-width: 40em; }
+    .meta { margin-top: 1rem; font-size: 0.8rem; color: var(--aluminum-dim); }
+    main { padding: 3.5rem 2rem 5rem; }
+    h2 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 400; color: var(--ivory); margin: 2.5rem 0 1rem; border-top: 1px solid rgba(201,168,76,0.12); padding-top: 2rem; }
+    h2:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+    p { color: var(--text-dim); margin-bottom: 1.15rem; font-size: 0.95rem; }
+    .log { background: rgba(0,0,0,0.25); border: 1px solid rgba(201,168,76,0.1); border-left: 2px solid var(--gold); padding: 1.4rem 1.5rem; margin: 1.25rem 0; }
+    .log .tag { display: block; font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+    .log blockquote { font-family: var(--font-serif); font-style: italic; color: var(--ivory); font-size: 1.05rem; line-height: 1.65; }
+    .eval { background: rgba(255,255,255,0.02); border: 1px solid rgba(201,168,76,0.08); padding: 1.25rem 1.4rem; margin: 1rem 0 1.5rem; }
+    .eval .tag { display: block; font-size: 0.65rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--aluminum-dim); margin-bottom: 0.5rem; }
+    ul { list-style: none; margin: 1rem 0 1.5rem; }
+    ul li { position: relative; padding-left: 1.1rem; margin-bottom: 1rem; color: var(--text-dim); font-size: 0.95rem; }
+    ul li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); opacity: 0.7; }
+    ul li strong { color: var(--ivory); font-weight: 500; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.2rem; }
+    .gallery figure { background: rgba(0,0,0,0.25); border: 1px solid rgba(201,168,76,0.1); cursor: zoom-in; overflow: hidden; }
+    .gallery img { width: 100%; aspect-ratio: 3/4; object-fit: cover; transition: transform 0.45s var(--ease); }
+    .gallery figure:hover img { transform: scale(1.03); }
+    .gallery figcaption { padding: 0.7rem 0.9rem; font-size: 0.75rem; color: var(--aluminum-dim); font-family: var(--font-serif); font-style: italic; }
+    .pdf-link { display: inline-block; margin: 0.5rem 0 1.5rem; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); border-bottom: 1px solid rgba(201,168,76,0.35); padding-bottom: 0.2rem; }
+    .obit-layout { display: grid; grid-template-columns: minmax(0,380px) 1fr; gap: 2.5rem; align-items: start; }
+    @media (max-width: 800px) { .obit-layout { grid-template-columns: 1fr; } }
+    .photo-frame { border: 1px solid rgba(201,168,76,0.12); padding: 0.6rem; background: rgba(0,0,0,0.25); cursor: zoom-in; }
+    .record { background: rgba(0,0,0,0.25); border: 1px solid rgba(201,168,76,0.1); padding: 2rem 1.7rem; }
+    .record h2 { border: none; padding: 0; margin: 0 0 0.3rem; font-size: 1.5rem; }
+    .record .dates { color: var(--gold); font-size: 0.85rem; letter-spacing: 0.08em; margin-bottom: 1.4rem; }
+    footer { padding: 2.5rem 2rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.04); color: var(--aluminum-dim); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 2000; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.35s; padding: 2rem; }
+    .lightbox.on { opacity: 1; pointer-events: all; }
+    .lightbox img { max-width: 90vw; max-height: 80vh; object-fit: contain; }
+    .lightbox-x { position: absolute; top: 1.2rem; right: 1.5rem; background: none; border: none; color: var(--ivory); font-size: 2.2rem; cursor: pointer; }
+  </style>
+</head><body>
+  <nav class="nav"><div class="nav-inner"><a href="index.html" class="nav-logo">Newman Cuff Legacy</a><a href="index.html" class="back">← Back to Main Archive</a></div></nav>
+  <header class="header"><div class="wrap">
+    <span class="act">Appendix A</span>
+    <h1>Appendix A: Provenance Correspondence (The "Fun Obit" Emails)</h1>
+    <p class="intro">Photographs of timestamped email correspondence validating that Joannie personally authored her own biographical records.</p>
+    <p class="meta">Source: The Estate of Joan "Joannie" Gloeckler King · Printed email chain, April 2018</p>
+  </div></header>
+  <main><div class="wrap-wide">
+    <div class="gallery" id="gallery"><figure data-src="images/appendix-a/20260722_141124.jpg"><img src="images/appendix-a/20260722_141124.jpg" alt="Fun Obit correspondence page 1 of 9" loading="lazy" /><figcaption>Page 1 of 9</figcaption></figure>
+<figure data-src="images/appendix-a/20260722_141137.jpg"><img src="images/appendix-a/20260722_141137.jpg" alt="Fun Obit correspondence page 2 of 9" loading="lazy" /><figcaption>Page 2 of 9</figcaption></figure>
+<figure data-src="images/appendix-a/20260722_141155.jpg"><img src="images/appendix-a/20260722_141155.jpg" alt="Fun Obit correspondence page 3 of 9" loading="lazy" /><figcaption>Page 3 of 9</figcaption></figure>
+<figure data-src="images/appendix-a/20260722_141210.jpg"><img src="images/appendix-a/20260722_141210.jpg" alt="Fun Obit correspondence page 4 of 9" loading="lazy" /><figcaption>Page 4 of 9</figcaption></figure>
+<figure data-src="images/appendix-a/20260722_141223.jpg"><img src="images/appendix-a/20260722_141223.jpg" alt="Fun Obit correspondence page 5 of 9" loading="lazy" /><figcaption>Page 5 of 9</figcaption></figure>
+<figure data-src="images/appendix-a/20260722_141233.jpg"><img src="images/appendix-a/20260722_141233.jpg" alt="Fun Obit correspondence page 6 of 9" loading="lazy" /><figcaption>Page 6 of 9</figcaption></figure>
+<figure data-src="images/appendix-a/20260722_141250.jpg"><img src="images/appendix-a/20260722_141250.jpg" alt="Fun Obit correspondence page 7 of 9" loading="lazy" /><figcaption>Page 7 of 9</figcaption></figure>
+<figure data-src="images/appendix-a/20260722_141303.jpg"><img src="images/appendix-a/20260722_141303.jpg" alt="Fun Obit correspondence page 8 of 9" loading="lazy" /><figcaption>Page 8 of 9</figcaption></figure>
+<figure data-src="images/appendix-a/20260722_141408.jpg"><img src="images/appendix-a/20260722_141408.jpg" alt="Fun Obit correspondence page 9 of 9" loading="lazy" /><figcaption>Page 9 of 9</figcaption></figure>
+    </div>
+    <p style="margin-top:2.5rem;"><a href="index.html" class="back">← Back to Main Archive</a></p>
+  </div></main>
+  <footer>The Joannie Gloeckler King Archive © Estate of Joan “Joannie” Gloeckler King</footer>
+  <div class="lightbox" id="lightbox"><button class="lightbox-x" id="lx">&times;</button><img src="" alt="" id="li" /></div>
+  <script>
+    const lb=document.getElementById('lightbox'), li=document.getElementById('li');
+    document.querySelectorAll('#gallery figure').forEach(f=>f.addEventListener('click',()=>{li.src=f.dataset.src;lb.classList.add('on');document.body.style.overflow='hidden';}));
+    function c(){lb.classList.remove('on');document.body.style.overflow='';}
+    document.getElementById('lx').onclick=c; lb.onclick=e=>{if(e.target===lb)c()}; document.onkeydown=e=>{if(e.key==='Escape')c()};
+  </script>
+</body></html>
